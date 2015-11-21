@@ -1,0 +1,257 @@
+$icon-font-path: '../fonts/';
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "bower_components/font-awesome/scss/font-awesome.scss";
+// endbower
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+  font: 14px/18px "Lantinghei SC","Microsoft YaHei","微软雅黑","STHeiti",メイリオ, Meiryo, 'ヒラギノ角ゴ Pro w3', 'Hiragino Kaku Gothic Pro', Osaka, 'ＭＳ Ｐゴシック', 'MS P Gothic', STXihei, 'HEITI TC', 黑體-繁, 微軟正黑體, 黑體, Arial, Helvetica, sans-serif,"微軟正黑體",'cwTeXHei', 'cwTeXYen', "Segoe UI","Helvetica Neue", cursive;
+  color:#696969;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  font-style: normal;
+  text-rendering: optimizelegibility;
+  padding-bottom: 20px;
+  color:#000;
+  a{
+    color:#000;
+    transition-duration: 0.15s;
+    &:hover{
+      transition-duration: 0.25s;
+    }
+    &:focus,&:hover,&.active{
+      color:#007b94;
+      outline:0;
+      text-decoration: none;
+    }
+  }
+  nav{
+    margin-top:25px;
+    ul{
+      width:100%;
+      text-align: center;
+      letter-spacing: 15px;
+      margin:0;
+      padding:0;
+      li{
+        list-style:none;
+        letter-spacing: 1px;
+        // float:left;
+        display: inline-block;
+        &.active{
+          a{
+            color:#007b94;
+          }
+        }
+        a{
+          font-weight: 600;
+        }
+      }
+    }
+    &.mm-opened{
+      z-index: 1;
+    }
+  }
+  ul{
+    margin:0;
+    padding:0;
+    li{
+      list-style: none;
+      display: inline-block;
+    }
+  }
+
+  h3{
+    font-size: percentage(18/14);
+    color:#007b94;
+  }
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.footer {
+  padding:0 ;
+}
+
+/* Custom page header */
+header {
+  // border-bottom: 1px solid #e5e5e5;
+  margin:0;
+  position:relative;
+
+  /* Make the masthead heading the same height as the navigation */
+  h1 {
+    text-align: center;
+    line-height: 40px;
+  }
+  #mm{
+    cursor: pointer;
+    position:absolute;
+    display: none;
+    bottom:0;
+    left:15px;
+    font-size: 22px;
+    &:hover{
+        transform:skewY(-20deg);
+    }
+  }
+}
+.mm-navbar{
+  display: none !important;
+}
+
+/* Custom page footer */
+footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+  li{
+    text-align: left;
+    margin-bottom:40px;
+    min-height: 180px;
+    fieldset{
+      width:140px;
+      margin:0 auto;
+    }
+    legend{
+      border:0;
+      font-weight: 600;
+      font-size: percentage(13/14);
+      line-height: 30px;
+      margin:0;
+    }
+    a{
+      display: block;
+      white-space: nowrap;
+      font-weight: normal !important;
+      font-size: percentage(13/14);
+      line-height: 30px;
+      color:#a0a0a0;
+      &:hover{
+        color:#000;
+      }
+    }
+  }
+  .social{
+    font-size: percentage(32/14);
+    width: 100%;
+    text-align: center;
+    li{
+      display: inline-block;
+      letter-spacing: 20px;
+      min-height: 50px;
+      &:hover{
+        .fa-google-plus{
+          color:#D6492F
+        }
+        .fa-instagram{
+          color:#B7A18A;
+        }
+        .fa-facebook{
+          color:#728AB0;
+        }
+        .fa-youtube{
+          color:#BC3028;
+        }
+      }
+    }
+  }
+  .copy{
+    text-align:center;
+    font-size: percentage(10/14);
+  }
+}
+.row{
+ margin:0;
+}
+
+
+@import "page/home";
+
+
+.container{
+
+}
+
+
+@media screen and (min-width: 1170px) {
+  .container {
+    width: 100%;
+    max-width: 1400px;
+    padding: 0;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media (max-width: 1170px)  and (min-width: 768px) {
+  header #mm{
+    display: block;
+  }
+  .container {
+    width: 100%;
+    max-width: 1170px;
+    padding: 0;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px)   {
+  header #mm{
+    display: block;
+  }
+  .container {
+    width: 100%;
+    max-width: 767px;
+    padding: 0;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+}
