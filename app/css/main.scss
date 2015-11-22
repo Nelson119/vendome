@@ -175,12 +175,19 @@ footer {
  margin:0;
 }
 
+.home{
+  @import "page/home";
+}
+.contactus{
+  @import "page/contactus";
+}
 
-@import "page/home";
 
-
-.container{
-
+.banner{
+  margin-top: 25px;
+  img{
+    max-width: 100%;
+  }
 }
 
 

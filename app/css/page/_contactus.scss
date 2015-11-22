@@ -1,0 +1,22 @@
+form{
+  margin-top:50px;
+  margin-bottom:40px;
+  .form-control.control-label {
+      border: 0 none;
+      box-shadow: none;
+  }
+  textarea{
+    resize:none;
+  }
+  .btn-default{
+    background:#959595;
+    color: #fff;
+    letter-spacing: 1em;
+    text-align: right;
+    width: 100px;
+    margin-left:20px;
+    &:hover{
+      background:#24859c;
+    }
+  }
+}

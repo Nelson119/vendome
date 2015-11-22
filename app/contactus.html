@@ -39,7 +39,7 @@
         <h1 class="text-muted"><a href="./"><img alt="VEMDOME AESTHETICS MEDICAL CENTER 凡登整型外科" src="img/common/logo.png"></a></h1>
         <nav>
           <ul>
-            <li class="active"><a href="#">凡登新消息</a></li>
+            <li><a href="#">凡登新消息</a></li>
             <li><a href="#">臉部整形</a></li>
             <li><a href="#">身體整形</a></li>
             <li><a href="#">雷射/微整型</a></li>
@@ -47,62 +47,122 @@
             <li><a href="#">分店資訊</a></li>
             <li><a href="#">醫療團隊</a></li>
             <li><a href="#">國際醫療</a></li>
-            <li><a href="contactus.html">告訴我們你的煩惱</a></li>
+            <li class="active"><a href="contactus.html">告訴我們你的煩惱</a></li>
           </ul>
         </nav>
         <a id="mm"><i class="fa fa-bars"></i></a>
       </header>
     </section>
-    
-    <section id="home-gallery">
-
-      <div id="blueimp-gallery-carousel" class="blueimp-gallery blueimp-gallery-carousel">
-          <div class="slides"></div>
-          <h3 class="title"></h3>
-          <a class="prev">‹</a>
-          <a class="next">›</a>
-          <a class="play-pause"></a>
-          <ol class="indicator"></ol>
-          <a class="links" href="img/banner/banner1.jpg"></a>
-          <a class="links" href="img/banner/banner2.jpg"></a>
-          <a class="links" href="img/banner/banner3.jpg"></a>
-      </div>
+    <section class="banner">
+      <img src="img/contactus/banner.png">
     </section>
 
-    <section class="container home">
+    <section class="container contactus">
 
-      <section class="articles row">
-        <ul class="col-lg-12 col-md-12 col-sm-12">
-          <li class="col-lg-3 col-md-4 col-sm-12">
-            <aside><img src="img/home/article1.png"></aside>
-            <h3>有下巴與戽斗<span> - 陳瑞鋒醫師</span></h3>
-            <p>
-              常常在和下顎骨突出 ( Mandibular prognathism )的人解釋正顎手術過程時，提到手術設計上考慮將 下顎骨向後 (Mandible setback )之外，同時將下巴的部分向前移 ( Chin advancement )，這樣可以做出較好看的下巴線條</p>
-            <a href="javascript:">繼續閱讀</a>
-          </li>
-          <li class="col-lg-3 col-md-4 col-sm-12">
-            <aside><img src="img/home/article1.png"></aside>
-            <h3>有下巴與戽斗抖抖抖抖抖抖<span> - 陳瑞鋒醫師</span></h3>
-            <p>
-              常常在和下顎骨突出 ( Mandibular prognathism ) 的人解釋正顎手術過程時，提到手術設計上考慮將 下顎骨向後 (Mandible setback )之外，同時將下巴的部分向前移 ( Chin advancement )，這樣可以做出較好看的下巴線條</p>
-            <a href="javascript:">繼續閱讀</a>
-          </li>
-          <li class="col-lg-3 col-md-4 col-sm-12">
-            <aside><img src="img/home/article1.png"></aside>
-            <h3>有下巴與戽斗<span> - 陳瑞鋒醫師</span></h3>
-            <p>
-              常常在和下顎骨突出 ( Mandibular prognathism ) 的人解釋正顎手術過程時，提到手術設計上考慮將 下顎骨向後 (Mandible setback )之外，同時將下巴的部分向前移 ( Chin advancement )，這樣可以做出較好看的下巴線條</p>
-            <a href="javascript:">繼續閱讀</a>
-          </li>
-          <li class="col-lg-3 col-md-4 col-sm-12">
-            <aside><img src="img/home/article1.png"></aside>
-            <h3>有下巴與戽斗<span> - 陳瑞鋒醫師</span></h3>
-            <p>
-              常常在和下顎骨突出 ( Mandibular prognathism ) 的人解釋正顎手術過程時，提到手術設計上考慮將 下顎骨向後 (Mandible setback )之外，同時將下巴的部分向前移 ( Chin advancement )，這樣可以做出較好看的下巴線條</p>
-            <a href="javascript:">繼續閱讀</a>
-          </li>
-        </ul>
-        <hr>
+      <form class="col-lg-6 col-lg-offset-3">
+        <section class="row">
+
+          <section class="col-lg-3 form-group text-left">
+            <label class="form-control control-label" for="clientName">姓名：</label>
+          </section>
+          <section class="col-lg-3 form-group">
+            <input class="form-control" type="text" name="clientName" placeholder="請填入姓名">
+          </section>
+
+          <section class="col-lg-3 form-group text-left">
+            <label class="form-control control-label" for="gender">性別：</label>
+          </section>
+          <section class="col-lg-3 form-group">
+            <select class="form-control" name="gender">
+              <option>請選擇</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>LBGTQ</option>
+            </select>
+          </section>
+        </section>
+
+        <section class="row">
+          <section class="col-lg-3 form-group text-left">
+            <label class="form-control control-label" for="phone">聯絡電話：</label>
+          </section>
+          <section class="col-lg-3 form-group">
+            <input class="form-control" type="text" name="phone" placeholder="請填寫電話">
+          </section>
+
+
+          <section class="col-lg-3 form-group text-left">
+            <label class="form-control control-label" for="contactTime">聯絡時段：</label>
+          </section>
+          <section class="col-lg-3 form-group">
+            <select class="form-control" name="contactTime">
+              <option>請選擇</option>
+            </select>
+          </section>
+        </section>
+
+
+        <section class="row">
+          <section class="col-lg-3 form-group text-left">
+            <label class="form-control control-label" for="email">電子郵件：</label>
+          </section>
+          <section class="col-lg-9 form-group">
+            <input class="form-control" type="text" name="email" placeholder="請電子郵件">
+          </section>
+        </section>
+
+        <section class="row">
+
+          <section class="col-lg-3 form-group text-left">
+            <label class="form-control control-label" for="part">諮詢部位：</label>
+          </section>
+          <section class="col-lg-3 form-group">
+            <select class="form-control" name="part">
+              <option>請選擇</option>
+            </select>
+          </section>
+
+          <section class="col-lg-3 form-group text-left">
+            <label class="form-control control-label" for="doctor">諮詢醫師：</label>
+          </section>
+          <section class="col-lg-3 form-group">
+            <select class="form-control" name="doctor">
+              <option>請選擇</option>
+            </select>
+          </section>
+        </section>
+
+        <section class="row">
+
+          <section class="col-lg-3 form-group text-left">
+            <label class="form-control control-label" for="branch">希望諮詢分店：</label>
+          </section>
+          <section class="col-lg-9 form-group">
+            <select class="form-control" name="branch">
+              <option>請選擇</option>
+            </select>
+          </section>
+        </section>
+
+        <section class="row">
+
+          <section class="col-lg-3 form-group text-left">
+            <label class="form-control control-label" for="quote">備註：</label>
+          </section>
+          <section class="col-lg-9 form-group">
+            <textarea class="form-control" placeholder="" name="quote" cols="65" rows="15"></textarea>
+          </section>
+        </section>
+
+        <section class="row">
+
+          <section class="col-lg-6 col-lg-offset-6 form-group text-right">
+            <a class="btn btn-default">重填</a>
+            <a class="btn btn-default">送出</a>
+          </section>
+        </section>
+
+        </form>
       </section>
 
       <footer>
