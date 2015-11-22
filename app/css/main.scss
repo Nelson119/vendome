@@ -229,7 +229,11 @@ footer {
     }
   }
 }
-
+.mobile,.tablet{
+  header #mm{
+    display: block;
+  }
+}
 
 @media screen and (min-width: 1170px) {
   .container {
@@ -256,9 +260,6 @@ footer {
 
 /* Responsive: Portrait tablets and up */
 @media (max-width: 1170px)  and (min-width: 768px) {
-  header #mm{
-    display: block;
-  }
   .container {
     width: 100%;
     max-width: 1170px;
@@ -280,9 +281,6 @@ footer {
 }
 
 @media (max-width: 767px)   {
-  header #mm{
-    display: block;
-  }
   .container {
     width: 100%;
     max-width: 767px;
