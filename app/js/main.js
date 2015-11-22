@@ -4,7 +4,7 @@
 
 $(function(){
 	if($('#home-gallery .links').length){
-		
+
 		blueimp.Gallery($('#home-gallery .links'), {
 				container: '#blueimp-gallery-carousel',
 				carousel: true,
