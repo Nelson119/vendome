@@ -23,8 +23,24 @@ $(function(){
 		$('header nav').mmenu({});
 		var menu = $('.mm-menu').data( 'mmenu' );
 		$('#mm').click(function(event) {
+			if(!$('#menu.mm-opened').length){
+				$('i', this).removeClass('fa-bars').addClass('fa-remove');
+				menu.open();
+			}else{
+				$('i', this).addClass('fa-bars').removeClass('fa-remove');
+				menu.close();
+			}
 			event.preventDefault();
-			menu.open();
+
+		});
+		$('footer ul:eq(0) fieldset legend').on('click', function(){
+			if(!$(this).parent().find('a:visible').length){
+				$(this).parents('ul').find('a:visible').fadeOut(250).parent().find('i').addClass('fa-plus').removeClass('fa-minus');
+				$(this).parent().find('a').fadeIn(250);
+				$(this).find('i').addClass('fa-minus').removeClass('fa-plus');
+			}else{
+				$(this).parent().find('a:visible').fadeOut(250).parent().find('i').addClass('fa-plus').removeClass('fa-minus');
+			}
 		});
 	}
 });

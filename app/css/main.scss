@@ -35,19 +35,31 @@ body {
       text-decoration: none;
     }
   }
-  nav{
+  nav#menu{
     margin-top:25px;
+    @media screen and (max-width: 1170px) {
+      margin:0;
+      width:100%;
+    }
     ul{
       width:100%;
       text-align: center;
       letter-spacing: 15px;
       margin:0;
       padding:0;
+      @media screen and (max-width: 1170px) {
+        margin-top:-50px;
+      }
       li{
         list-style:none;
         letter-spacing: 1px;
         // float:left;
         display: inline-block;
+        @media screen and (max-width: 1170px) {
+          display: block;
+          font-size: 120%;
+        }
+
         &.active{
           a{
             color:#007b94;
@@ -55,12 +67,31 @@ body {
         }
         a{
           font-weight: 600;
+          @media screen and (max-width: 1170px) {
+            padding:15px;
+          }
+        }
+        &:last-child{
+          position:relative;
+          a{
+            img {
+              position:absolute;
+              bottom:0;
+              right:-40px;
+              @media screen and (max-width: 1170px) {
+                bottom:15px;
+                right:0px;
+              }
+            }
+          }
         }
       }
     }
     &.mm-opened{
       z-index: 1;
     }
+
+
   }
   ul{
     margin:0;
@@ -98,12 +129,10 @@ header {
     cursor: pointer;
     position:absolute;
     display: none;
-    bottom:0;
-    left:15px;
+    top:5px;
+    left:10px;
     font-size: 22px;
-    &:hover{
-        transform:skewY(-20deg);
-    }
+    z-index: 1;
   }
 }
 .mm-navbar{
@@ -115,13 +144,42 @@ footer {
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
+  nav{
+    &:nth-child(1){
+      @media screen and (max-width: 768px) {
+
+        letter-spacing: 30px;
+        legend{
+          letter-spacing: 1px;
+          > a{
+            transform :none;
+            height: auto;
+          }
+          cursor: pointer;
+        }
+      }
+    }
+    &:nth-child(2){
+      @media screen and (max-width: 768px) {
+        margin: 20px 0 0;
+      }
+    }
+
+  }
   li{
     text-align: left;
     margin-bottom:40px;
     min-height: 180px;
+    @media screen and (max-width: 768px) {
+      margin-bottom:0;
+    }
     fieldset{
       width:140px;
       margin:0 auto;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        padding: 0 15px;
+      }
     }
     legend{
       border:0;
@@ -129,9 +187,21 @@ footer {
       font-size: percentage(13/14);
       line-height: 30px;
       margin:0;
+      i.fa-plus, i.fa-minus{
+        display: none;
+        font-size: 10px;
+        color:#666;
+        @media screen and (max-width: 768px) {
+          display: inline-block;
+        }
+      }
     }
     a{
       display: block;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+      letter-spacing: 1px;
       white-space: nowrap;
       font-weight: normal !important;
       font-size: percentage(13/14);
@@ -140,6 +210,7 @@ footer {
       &:hover{
         color:#000;
       }
+
     }
   }
   .social{
@@ -202,7 +273,7 @@ footer {
     position:relative;
     max-width: 450px;
     height: 400px;
-    overflow:hidden;
+    // overflow:hidden;
     aside{
       border:1px solid #000;
       padding:10px;
@@ -213,6 +284,9 @@ footer {
     h3{
       margin: 20px 0 10px;
       line-height: 28px;
+      span{
+        display: block;
+      }
     }
     p{
       margin:0;
@@ -224,7 +298,7 @@ footer {
       color:#007b94;
       position:absolute;
       right:15px;
-      bottom: 0;
+      bottom: -10px;
     }
   }
 }
