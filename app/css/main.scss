@@ -35,13 +35,16 @@ body {
       text-decoration: none;
     }
   }
+  #mm-blocker{
+    display: none !important;
+  }
   nav#menu{
     margin-top:25px;
     @media screen and (max-width: 1170px) {
       margin:0;
       width:100%;
     }
-    ul{
+    >ul{
       width:100%;
       text-align: center;
       letter-spacing: 15px;
@@ -50,11 +53,13 @@ body {
       @media screen and (max-width: 1170px) {
         margin-top:-50px;
       }
-      li{
+      >li{
         list-style:none;
         letter-spacing: 1px;
         // float:left;
         display: inline-block;
+        position:relative;
+        text-align:center;
         @media screen and (max-width: 1170px) {
           display: block;
           font-size: 120%;
@@ -65,7 +70,8 @@ body {
             color:#007b94;
           }
         }
-        a{
+        >a{
+          padding-right:0;
           font-weight: 600;
           @media screen and (max-width: 1170px) {
             padding:15px;
@@ -76,13 +82,35 @@ body {
           a{
             img {
               position:absolute;
-              bottom:0;
-              right:-40px;
+              bottom:25px;
+              right:0;
               @media screen and (max-width: 1170px) {
-                bottom:15px;
+                bottom:25px;
                 right:0px;
               }
             }
+          }
+        }
+        ul{
+          &:after{
+            border:0;
+          }
+          margin-top:20px;
+          position:absolute;
+          z-index: 1;
+          li{
+            // height: 2em;
+            display: block;
+            text-align: center;
+            background:rgba(255,255,255,0.75);
+            padding:10px 15px;
+            &+li{
+              border-top:1px solid #aaa;
+              a{
+                line-height: 1em;
+              }
+            }
+
           }
         }
       }
@@ -105,6 +133,27 @@ body {
   h3{
     font-size: percentage(18/14);
     color:#007b94;
+  }
+  .pagination{
+    letter-spacing: -1em;
+    a{
+      letter-spacing: 1px;
+      display: inline-block;
+      padding:0 8px;
+      color:#007b94;
+      &:hover,&.active{
+        color:#6cdbf1;
+      }
+    }
+    ul{
+      display: inline;
+      white-space: nowrap;
+      width: auto;
+      li{
+        display: inline;
+        width: auto;
+      }
+    }
   }
 }
 
@@ -254,7 +303,19 @@ footer {
 .article{
   @import "page/article";
 }
+.news{
+  @import "page/news";
+}
 
+
+.detail{
+  aside {
+    position: relative;
+    img{
+      width:100%;
+    }
+  }
+}
 
 .banner{
   margin-top: 25px;
@@ -267,7 +328,7 @@ footer {
     position:relative;
   }
 }
-
+.top-buffer { margin-top:20px; }
 .articles{
   li{
     position:relative;
@@ -300,6 +361,13 @@ footer {
       right:15px;
       bottom: -10px;
     }
+  }
+  >hr{
+    border-color:#f0f0f0;
+    @media screen and (max-width: 1170px) {
+      display: none;
+    }
+
   }
 }
 .mobile,.tablet{

@@ -29,6 +29,8 @@ $(function(){
 			}else{
 				$('i', this).addClass('fa-bars').removeClass('fa-remove');
 				menu.close();
+				$('li', menu).removeClass('mm-selected');
+				menu.closeAllPanels();
 			}
 			event.preventDefault();
 
@@ -42,5 +44,8 @@ $(function(){
 				$(this).parent().find('a:visible').fadeOut(250).parent().find('i').addClass('fa-plus').removeClass('fa-minus');
 			}
 		});
+	}else {
+
+		$('header nav ul').superfish();
 	}
 });

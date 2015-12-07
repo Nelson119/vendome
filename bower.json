@@ -11,7 +11,8 @@
     "font-awesome": "~4.4.0",
     "jQuery.mmenu": "~5.5.3",
     "detectizr": "~2.2.0",
-    "jquery-hoverintent": "jquery-hoverIntent#~1.8.1"
+    "jquery-hoverintent": "jquery-hoverIntent#~1.8.1",
+    "superfish": "~1.7.6"
   },
   "overrides": {
     "bootstrap-sass": {

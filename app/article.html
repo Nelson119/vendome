@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="/bower_components/blueimp-gallery/css/blueimp-gallery-indicator.css" />
     <link rel="stylesheet" href="/bower_components/blueimp-gallery/css/blueimp-gallery-video.css" />
     <link rel="stylesheet" href="/bower_components/jQuery.mmenu/dist/core/css/jquery.mmenu.all.css" />
+    <link rel="stylesheet" href="/bower_components/superfish/dist/css/superfish.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -39,7 +40,14 @@
         <h1 class="text-muted"><a href="./"><img alt="VEMDOME AESTHETICS MEDICAL CENTER 凡登整型外科" src="img/common/logo.png"></a></h1>
         <nav id="menu">
           <ul>
-            <li><a href="#">凡登新消息</a></li>
+            <li><a href="news.html">凡登新消息</a>
+              <ul>
+                <li><a href="javascript:">aaa</a></li>
+                <li><a href="javascript:">bbb</a></li>
+                <li><a href="javascript:">ccc</a></li>
+                <li><a href="javascript:">ddd</a></li>
+              </ul>
+            </li>
             <li><a href="#">臉部整形</a></li>
             <li><a href="#">身體整形</a></li>
             <li><a href="#">雷射/微整型</a></li>
@@ -61,7 +69,20 @@
         
         <section class="col-lg-12 col-md-12 col-sm-12">
           
-          <aside class="col-lg-2 col-lg-offset-1">
+          <aside class="col-lg-7 col-lg-offset-2 col-md-12 col-sm-12 col-xs-12 pull-right">
+            <article>
+              <h2>文章標題 - by <span class="author">醫生名字</span> <span class="date">October 20, 2015</span></h2>
+              <figure><img src="http://fakeimg.pl/620x480/666666/fefefe/"></figure>
+              <p>
+                The Martian 是最近很熱門的一部電影，由擅長科技題材的Ridley Scott執導， Matt Damon則再度飾演等待救援的角色（繼Saving private Ryan 及Interstellar 後再次被救），只是這次Matt需要靠自己的力量在火星上存活一年，其間意外一再發生，他...
+              </p>
+              <aside class="functions">
+                <span class="date"><i class="fa fa-calendar"></i> 2015/10/20</span>
+                <span class="comments"><i class="fa fa-comments"></i> 0 個回應</span>
+              </aside>
+            </article>
+          </aside>
+          <aside class="hidden-sm hidden-xs col-lg-2 col-lg-offset-1 pull-right">
             <fieldset class="categories">
               <legend>
                 文章分類
@@ -86,19 +107,6 @@
                 </li>
               </ul>
             </fieldset>
-          </aside>
-          <aside class="col-lg-7 col-lg-offset-1">
-            <article>
-              <h2>文章標題 - by <span class="author">醫生名字</span> <span class="date">October 20, 2015</span></h2>
-              <figure><img src="http://fakeimg.pl/620x480/666666/fefefe/"></figure>
-              <p>
-                The Martian 是最近很熱門的一部電影，由擅長科技題材的Ridley Scott執導， Matt Damon則再度飾演等待救援的角色（繼Saving private Ryan 及Interstellar 後再次被救），只是這次Matt需要靠自己的力量在火星上存活一年，其間意外一再發生，他...
-              </p>
-              <aside class="functions">
-                <span class="date"><i class="fa fa-calendar"></i> 2015/10/20</span>
-                <span class="comments"><i class="fa fa-comments"></i> 0 個回應</span>
-              </aside>
-            </article>
           </aside>
         </section>
         <hr>
@@ -133,6 +141,37 @@
             <a href="article.html">繼續閱讀</a>
           </li>
         </ul>
+
+
+        <section class="hidden-lg hidden-md col-lg-12 col-md-12 col-sm-12">
+          
+          <aside class="col-lg-2 col-lg-offset-1 pull-right">
+            <fieldset class="categories">
+              <legend>
+                文章分類
+              </legend>
+              <ul>
+                <li><a href="javascript:">正顎手術（<span class="count">10</span>）</a></li>
+                <li><a href="javascript:">下巴手術（<span class="count">9</span>）</a></li>
+                <li><a href="javascript:">微整型（<span class="count">111</span>）</a></li>
+                <li><a href="javascript:">拉皮手術（<span class="count">111111</span>）</a></li>
+                <li><a href="javascript:">xxx（<span class="count">0</span>）</a></li>
+              </ul>
+            </fieldset>
+            <fieldset class="headline">
+              <legend>
+                熱門文章
+              </legend>
+              <ul>
+                <li>
+                    <h4><a href="javascript:">標題（啦啦啦啦啦<span> - 醫師名</span></a></h4>
+                    <figure><a href="javascript:"><img src="img/article/thumb.png"></a></figure>
+                    <p>常常在和下顎骨突出 (Mandibular prognathism) 的人解釋正顎手術過程時，提到手術設計上考慮將 下顎骨向後...</p>
+                </li>
+              </ul>
+            </fieldset>
+          </aside>
+        </section>
       </section>
       <footer>
         <nav class="row">
@@ -258,6 +297,9 @@
     <script src="/bower_components/blueimp-gallery/js/blueimp-gallery-vimeo.js"></script>
     <script src="/bower_components/blueimp-gallery/js/blueimp-gallery-youtube.js"></script>
     <script src="/bower_components/jQuery.mmenu/dist/core/js/jquery.mmenu.min.all.js"></script>
+    <script src="/bower_components/jquery-hoverintent/jquery.hoverIntent.js"></script>
+    <script src="/bower_components/superfish/dist/js/superfish.js"></script>
+    <script src="/bower_components/superfish/dist/js/hoverIntent.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     
