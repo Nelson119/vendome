@@ -12,6 +12,7 @@ $icon-font-path: '../fonts/';
   padding: 0.2em 0;
 }
 
+$main-link-color: #007b94;
 /* Space out content a bit */
 body {
   font: 14px/18px "Lantinghei SC","Microsoft YaHei","微软雅黑","STHeiti",メイリオ, Meiryo, 'ヒラギノ角ゴ Pro w3', 'Hiragino Kaku Gothic Pro', Osaka, 'ＭＳ Ｐゴシック', 'MS P Gothic', STXihei, 'HEITI TC', 黑體-繁, 微軟正黑體, 黑體, Arial, Helvetica, sans-serif,"微軟正黑體",'cwTeXHei', 'cwTeXYen', "Segoe UI","Helvetica Neue", cursive;
@@ -41,8 +42,10 @@ body {
   nav#menu{
     margin-top:25px;
     @media screen and (max-width: 1170px) {
-      margin:0;
-      width:100%;
+      display: none;
+    }
+    .sf-arrows .sf-with-ul::after{
+      display: none;
     }
     >ul{
       width:100%;
@@ -66,7 +69,7 @@ body {
         }
 
         &.active{
-          a{
+          >a{
             color:#007b94;
           }
         }
@@ -80,6 +83,7 @@ body {
         &:last-child{
           position:relative;
           a{
+            cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAQAAADFXM7/AAABGElEQVQ4y4XRrUtDURzG8QdhqBgGMsUrjGFQk6DFuiLIsIhmYQYNKggGg2WIf4BjliGsaROFBS2LIqyYxLQylIsiCIoT37+GK/ec673b+LXnfM55DucIIfQ8UmCKPrpIscglXmpGCF39DDFPmbvce2fNzTPAKiF2nxP7gfg1IVYCiRrOMDuhks9YmryVqkQmhLyLOHzEfDbHYSRDE1z4Kxrl+juaZSkZluTmLJqtUzBskvMmpbMcGbbFZiRrOHEeln1WryZwi2G2RJbA8+7i8DQWREVknfX3Wdt0c+rvfZzeoJdBau4/hk4Yp58ZFkgTZ43b4wxJC1pF9WqZAyq8pBB667GhaDo2bMFs2JIZ2IZ5cA+1n68O9AtwrqHuQELT4AAAAABJRU5ErkJggg==), auto;
             img {
               position:absolute;
               bottom:25px;
@@ -97,6 +101,7 @@ body {
           }
           margin-top:20px;
           position:absolute;
+          width: 100%;
           z-index: 1;
           li{
             // height: 2em;
@@ -104,6 +109,10 @@ body {
             text-align: center;
             background:rgba(255,255,255,0.75);
             padding:10px 15px;
+            min-width: 200px;
+            a{
+              // line-height: 1em;
+            }
             &+li{
               border-top:1px solid #aaa;
               a{
@@ -118,8 +127,143 @@ body {
     &.mm-opened{
       z-index: 1;
     }
+    #mm{
+      display: none;
+    }
 
-
+  }
+  nav#mmenu{
+    @media screen and (min-width: 1170px) {
+      display: none;
+    }
+    >ul{
+      position:fixed;
+      z-index: -1;
+      top:0;
+      opacity:0;
+      height:40px;
+      left:0;
+      width:100%;
+      overflow: hidden;
+      background: #F3F3F3;
+      font-size:percentage(16/14);
+      padding-top:20px;
+    }
+    li {
+      height:40px;
+      line-height: 50px;
+      vertical-align: baseline;
+      padding-left:5%;
+      a{
+        transition: opacity 0.75s ease-out 0s;
+      }
+      hr{
+        display: none;
+      }
+    }
+    >li {
+      display:  block;
+      margin:0 15px;
+      text-align:center;
+      border-bottom:1px solid #181818;
+      position:relative;
+      &:before{
+        display: inline-block;
+        vertical-align: middle;
+        content:' ';
+      }
+      a{
+        color:#fff;
+        display: inline-block;
+        vertical-align: middle;
+        opacity:0;
+        color:rgba(0,0,0,0);
+        &:hover{
+          color:$main-link-color;
+        }
+      }
+      ul {
+        height: 0;
+        padding:0;
+        margin:0;
+        overflow: hidden;
+        line-height:60px;
+        text-align:left;
+        width:100%;
+        letter-spacing: -1em;
+        transform: scaleY(0);
+        transform-origin: top center 0;
+        transition-duration: 0.5s;
+        opacity: 0;
+        li{
+          display: inline-block;
+          width:50%;
+          margin:0;
+          letter-spacing: 0.2em;
+        }
+      }
+    }
+    #mm{
+      cursor: pointer;
+      position:absolute;
+      top:5px;
+      left:10px;
+      font-size: 22px;
+      z-index: 10;
+      display: block;
+    }
+  }
+  &.menuon{
+    background: #F3F3F3;
+    nav#mmenu{
+      >ul{
+        top:40px;
+        position:absolute;
+        z-index: 100;
+        opacity:1;
+        height: auto;
+        letter-spacing: -1em;
+        >li{
+          width:100%;
+          height:40px;
+          position:relative;
+          a{
+            letter-spacing: 1px;
+          }
+          ul{
+            letter-spacing: -1em;
+            margin-top: -1em;
+            height:0;
+            overflow:hidden;
+            li{
+              transform:scaleY(0);
+              color:#000;
+              width: 100%;
+              padding-left: 10%;
+              a{
+                letter-spacing: 1px;
+              }
+            }
+          }
+          &.on{
+            ul{
+              height: auto;
+            }
+            li{
+              transform:none;
+            }
+          }
+        }
+      }
+    }
+    >section {
+      display: none;
+    }
+    #mm{
+      i:before{
+        content:"";
+      }
+    }
   }
   ul{
     margin:0;
@@ -129,6 +273,7 @@ body {
       display: inline-block;
     }
   }
+
 
   h3{
     font-size: percentage(18/14);
@@ -173,15 +318,6 @@ header {
   h1 {
     text-align: center;
     line-height: 40px;
-  }
-  #mm{
-    cursor: pointer;
-    position:absolute;
-    display: none;
-    top:5px;
-    left:10px;
-    font-size: 22px;
-    z-index: 1;
   }
 }
 .mm-navbar{
