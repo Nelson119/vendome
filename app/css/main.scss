@@ -83,7 +83,9 @@ body {
         &:last-child{
           position:relative;
           a{
-            cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAQAAADFXM7/AAABGElEQVQ4y4XRrUtDURzG8QdhqBgGMsUrjGFQk6DFuiLIsIhmYQYNKggGg2WIf4BjliGsaROFBS2LIqyYxLQylIsiCIoT37+GK/ec673b+LXnfM55DucIIfQ8UmCKPrpIscglXmpGCF39DDFPmbvce2fNzTPAKiF2nxP7gfg1IVYCiRrOMDuhks9YmryVqkQmhLyLOHzEfDbHYSRDE1z4Kxrl+juaZSkZluTmLJqtUzBskvMmpbMcGbbFZiRrOHEeln1WryZwi2G2RJbA8+7i8DQWREVknfX3Wdt0c+rvfZzeoJdBau4/hk4Yp58ZFkgTZ43b4wxJC1pF9WqZAyq8pBB667GhaDo2bMFs2JIZ2IZ5cA+1n68O9AtwrqHuQELT4AAAAABJRU5ErkJggg==), auto;
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAQAAADFXM7/AAABGElEQVQ4y4XRrUtDURzG8QdhqBgGMsUrjGFQk6DFuiLIsIhmYQYNKggGg2WIf4BjliGsaROFBS2LIqyYxLQylIsiCIoT37+GK/ec673b+LXnfM55DucIIfQ8UmCKPrpIscglXmpGCF39DDFPmbvce2fNzTPAKiF2nxP7gfg1IVYCiRrOMDuhks9YmryVqkQmhLyLOHzEfDbHYSRDE1z4Kxrl+juaZSkZluTmLJqtUzBskvMmpbMcGbbFZiRrOHEeln1WryZwi2G2RJbA8+7i8DQWREVknfX3Wdt0c+rvfZzeoJdBau4/hk4Yp58ZFkgTZ43b4wxJC1pF9WqZAyq8pBB667GhaDo2bMFs2JIZ2IZ5cA+1n68O9AtwrqHuQELT4AAAAABJRU5ErkJggg==) no-repeat right center;
+            padding-right:25px;
+
             img {
               position:absolute;
               bottom:25px;
