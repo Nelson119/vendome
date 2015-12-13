@@ -82,7 +82,7 @@ body {
         }
         &:last-child{
           position:relative;
-          a{
+          >a{
             background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAQAAADFXM7/AAABGElEQVQ4y4XRrUtDURzG8QdhqBgGMsUrjGFQk6DFuiLIsIhmYQYNKggGg2WIf4BjliGsaROFBS2LIqyYxLQylIsiCIoT37+GK/ec673b+LXnfM55DucIIfQ8UmCKPrpIscglXmpGCF39DDFPmbvce2fNzTPAKiF2nxP7gfg1IVYCiRrOMDuhks9YmryVqkQmhLyLOHzEfDbHYSRDE1z4Kxrl+juaZSkZluTmLJqtUzBskvMmpbMcGbbFZiRrOHEeln1WryZwi2G2RJbA8+7i8DQWREVknfX3Wdt0c+rvfZzeoJdBau4/hk4Yp58ZFkgTZ43b4wxJC1pF9WqZAyq8pBB667GhaDo2bMFs2JIZ2IZ5cA+1n68O9AtwrqHuQELT4AAAAABJRU5ErkJggg==) no-repeat right center;
             padding-right:25px;
 
@@ -96,6 +96,54 @@ body {
               }
             }
           }
+          >ul{
+            right:0;
+            left:auto;
+            width: auto;
+            background:none;
+            >li{
+              background:none;
+              padding:0;
+              width:auto;
+              >ol{
+                list-style:disc;
+                width:540px;
+                background:#fafafa;
+                border-radius:10px;
+                overflow:hidden;
+                padding:0;
+                >li{
+                  text-align:right;
+                  display: block;
+                  border:0;
+                  &:before{
+                    content: "";
+                    font-family: fontawesome;
+                    font-size: 7px;
+                    line-height: 0;
+                    margin-left: -15px;
+                    margin-top: 9px;
+                    position: absolute;
+                  }
+                  a{
+                    display: inline-block;
+                  }
+                  ol{
+                    text-align: right;
+                    li{
+                      border: 1px solid #000;
+                      display: inline-block;
+                      margin: 10px 5px;
+                      min-width: 0;
+                      padding: 3px 10px;
+                      width: auto;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
         }
         ul{
           &:after{
