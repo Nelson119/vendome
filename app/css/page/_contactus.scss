@@ -1,4 +1,9 @@
 form{
+  h2,h1{
+    color:#007b94;
+    font-size:percentage(18/14);
+    text-align: center;
+  }
   margin-top:50px;
   margin-bottom:40px;
   .form-control.control-label {
@@ -18,5 +23,8 @@ form{
     &:hover{
       background:#24859c;
     }
+  }
+  .gsc-search-button{
+    box-sizing: content-box;
   }
 }

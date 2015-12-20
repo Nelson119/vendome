@@ -1,5 +1,5 @@
 .main-content{
-  h2{
+  h2,h1{
     font-size:percentage(18/14);
     text-align: center;
   }
@@ -9,6 +9,13 @@
       width:100%;
       display: inline-block;
       margin-bottom:48px;
+      h3{
+        margin-top:0;
+        color:#333;
+        @media (max-width: 767px)   {
+          margin-top: 15px;
+        }
+      }
       &+li{
         border-top:1px solid #f0f0f0;
         padding-top:50px;
@@ -23,10 +30,15 @@
         }
       }
       .date{
-        color:#007b94;
+        color:#333;
         position:absolute;
         top:0;
-        right:0;
+        right:30px;
+        @media (max-width: 767px)   {
+          float: right;
+          right:0;
+          position:relative;
+        }
       }
     }
   }

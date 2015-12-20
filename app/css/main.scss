@@ -76,6 +76,15 @@ body {
         >a{
           padding-right:0;
           font-weight: 600;
+          img {
+            position:absolute;
+            bottom:25px;
+            right:0;
+            @media screen and (max-width: 1170px) {
+              bottom:25px;
+              right:0px;
+            }
+          }
           @media screen and (max-width: 1170px) {
             padding:15px;
           }
@@ -84,18 +93,13 @@ body {
           position:relative;
           >a{
             background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAQAAADFXM7/AAABGElEQVQ4y4XRrUtDURzG8QdhqBgGMsUrjGFQk6DFuiLIsIhmYQYNKggGg2WIf4BjliGsaROFBS2LIqyYxLQylIsiCIoT37+GK/ec673b+LXnfM55DucIIfQ8UmCKPrpIscglXmpGCF39DDFPmbvce2fNzTPAKiF2nxP7gfg1IVYCiRrOMDuhks9YmryVqkQmhLyLOHzEfDbHYSRDE1z4Kxrl+juaZSkZluTmLJqtUzBskvMmpbMcGbbFZiRrOHEeln1WryZwi2G2RJbA8+7i8DQWREVknfX3Wdt0c+rvfZzeoJdBau4/hk4Yp58ZFkgTZ43b4wxJC1pF9WqZAyq8pBB667GhaDo2bMFs2JIZ2IZ5cA+1n68O9AtwrqHuQELT4AAAAABJRU5ErkJggg==) no-repeat right center;
-            padding-right:25px;
-
-            img {
-              position:absolute;
-              bottom:25px;
-              right:0;
-              @media screen and (max-width: 1170px) {
-                bottom:25px;
-                right:0px;
-              }
-            }
+            padding-right: 25px;
+            padding-top: 20px;
+            position: relative;
+            top: 5px;
           }
+        }
+        &.box{
           >ul{
             right:0;
             left:auto;
@@ -152,12 +156,12 @@ body {
           margin-top:20px;
           position:absolute;
           width: 100%;
-          z-index: 1;
+          z-index: 9;
           li{
             // height: 2em;
             display: block;
             text-align: center;
-            background:rgba(255,255,255,0.75);
+            background:rgba(255,255,255,0.9);
             padding:10px 15px;
             min-width: 200px;
             a{
@@ -273,6 +277,12 @@ body {
         opacity:1;
         height: auto;
         letter-spacing: -1em;
+        .box.on li {
+          letter-spacing: 1px;
+        }
+        .box.on ol{
+          padding:5px;
+        }
         >li{
           width:100%;
           height:40px;
@@ -297,6 +307,7 @@ body {
           }
           &.on{
             ul{
+              display: block!important;
               height: auto;
             }
             li{
@@ -306,8 +317,8 @@ body {
         }
       }
     }
-    >section {
-      display: none;
+    >section,>#content {
+      display: none !important;
     }
     #mm{
       i:before{
@@ -349,6 +360,10 @@ body {
         width: auto;
       }
     }
+  }
+
+  img{
+    max-width: 100%;
   }
 }
 
@@ -452,9 +467,10 @@ footer {
     font-size: percentage(32/14);
     width: 100%;
     text-align: center;
+    letter-spacing: 20px;
     li{
       display: inline-block;
-      letter-spacing: 20px;
+      letter-spacing: 1px;
       min-height: 50px;
       &:hover{
         .fa-google-plus{
@@ -499,6 +515,7 @@ footer {
     position: relative;
     img{
       width:100%;
+      height:auto!important;
     }
   }
 }
@@ -508,9 +525,9 @@ footer {
   min-height: 100px;
   overflow:hidden;
   img{
-    height: 100%;
-    margin-left:-750px;
-    left:50%;
+    width: 100%;
+    // margin-left:-750px;
+    // left:50%;
     position:relative;
   }
 }

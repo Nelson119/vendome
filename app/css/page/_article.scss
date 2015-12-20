@@ -27,6 +27,15 @@
           color:#35a9c5;
         }
       }
+      figure{
+        width:250px;
+        height:250px;
+        line-height: 250px;
+        text-align: center;
+        img{
+          max-height: 100%;
+        }
+      }
       p{
         margin-top:10px;
       }
@@ -34,9 +43,28 @@
       border-bottom:1px solid #000;
     }
   }
-
+  img{
+    height:auto !important;
+  }
 }
 article{
+  > * {
+    margin: 0 auto;
+    max-width: 850px;
+  }
+
+  >a{
+    bottom: 10px;
+    color: #007b94;    
+    @media (max-width: 767px)   {
+      display: block;
+      position: relative!important;
+      margin-top: 20px;
+      text-align: right;
+      width: 100%;
+    }
+    right: 15px;
+  }
   margin-top:80px;
   margin-bottom: 40px;
   figure{
@@ -46,7 +74,7 @@ article{
       max-width: 100%;
     }
   }
-  h2{
+  h2,h1{
     color:#35a9c5;
     font-size: percentage(24/14);
     margin-bottom:40px;

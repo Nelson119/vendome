@@ -1,5 +1,6 @@
 #home-gallery{
-  height: 510px;
+  margin: 20px 0;
+  border:0;
 }
 #blueimp-gallery-carousel{
   position: relative;
@@ -43,4 +44,22 @@
   }
 
 }
+ .articles li > a{
+    @media (max-width: 767px)   {
+      display: block;
+      position: relative!important;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      text-align: right;
+      width: 100%;
+    }
+}
+ .articles li {
+    h3{
+      font-size:110%;
+    }
 
+    @media (max-width: 767px)   {
+      height: auto!important;
+    }
+}
